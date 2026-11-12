@@ -2798,7 +2798,7 @@ a.column-header:hover {
   text-align: center; }
 
 .theme-text {
-  max-width: 140px;
+  max-width: 1400px;
   margin: 0 auto 36px;
   font-size: 1.1rem;
   line-height: 1.5;
