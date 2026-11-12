@@ -23,9 +23,7 @@
 
 <div id="main-content" class="container" role="main">
   <div class="board">
-
-    <p class="theme-back"><a href="{{ baseurl }}{{ lang_path }}/">← Zurück zur Übersicht</a></p>
-
+    {% include components/goal/breadcrumbs.html %}
     <!-- Header-Banner -->
     <h1 class="column-header theme-banner header-{{ color }}">{{ goal_title }}</h1>
 
