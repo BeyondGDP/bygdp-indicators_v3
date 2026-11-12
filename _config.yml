@@ -112,6 +112,8 @@ collections:
     output: true
   goals:
     output: true
+  goal-group:
+    output: true
 
 # The list of languages that are translated. The first one is the default.
 languages:
