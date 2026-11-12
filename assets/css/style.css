@@ -2802,7 +2802,7 @@ a.column-header::after {
   text-align: center; }
 
 .theme-text {
-  max-width: 900px;
+  max-width: 140px;
   margin: 0 auto 36px;
   font-size: 1.1rem;
   line-height: 1.5;
