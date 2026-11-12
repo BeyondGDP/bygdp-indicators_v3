@@ -55,10 +55,7 @@ a.column-header:focus {
 }
 a.column-header { transition: filter 0.15s ease; margin-bottom: 0; }
 a.column-header:hover { filter: brightness(0.95); }
-a.column-header::after {
-  content: '→';
-  margin-left: 12px;
-}
+
 
 /* Unterseiten */
 .theme-back { margin-bottom: 16px; }
