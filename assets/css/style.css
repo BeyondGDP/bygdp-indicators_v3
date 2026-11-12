@@ -2787,10 +2787,6 @@ a.column-header {
 a.column-header:hover {
   filter: brightness(0.95); }
 
-a.column-header::after {
-  content: '→';
-  margin-left: 12px; }
-
 /* Unterseiten */
 .theme-back {
   margin-bottom: 16px; }
