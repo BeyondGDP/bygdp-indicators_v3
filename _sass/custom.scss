@@ -25,11 +25,25 @@ body {
 
 
 
-/* Startseite: 4 Blasen */
+/* Startseite: 2, 3, 4 in einer Reihe, 1 über die volle Breite darunter */
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+.themes-grid > * {
+  min-width: 0;
+}
+.themes-grid .theme-1 {
+  grid-column: 1 / -1;   /* volle Breite */
+  order: 1;              /* ans Ende, unabhängig von der Reihenfolge in page.goals */
+  margin-top: 8px;
+}
+
+@media (max-width: 860px) {
+  .themes-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .column-title { margin: 0; }
 
@@ -68,10 +82,6 @@ a.column-header::after {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 14px;
-}
-
-@media (max-width: 860px) {
-  .themes-grid { grid-template-columns: 1fr; }
 }
 
 
