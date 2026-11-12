@@ -2804,8 +2804,8 @@ a.column-header::after {
   .themes-grid {
     grid-template-columns: 1fr; } }
 .board {
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 1400px;
+  margin: 0; }
 
 .columns-navigation {
   margin-top: 50px;
