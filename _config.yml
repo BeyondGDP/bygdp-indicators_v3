@@ -20,6 +20,7 @@ data_edit_url: http://prose.io/#beyondgdp/bygdp-data/edit/develop/data/indicator
 metadata_edit_url: http://prose.io/#beyondgdp/bygdp-data/edit/develop/meta/[id].md
 # permalink: /news/:year/:month/:day/:title.html
 
+
 logos:
   - language: de
     src: assets/img/de/BYGDP_logo.png
