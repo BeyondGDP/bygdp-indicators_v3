@@ -2805,10 +2805,19 @@ a.column-header:hover {
   hyphens: auto; }
 
 .theme-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* unvollständige letzte Reihe wird mittig */
   gap: 14px; }
 
+.theme-items > .item-btn {
+  width: calc((100% - (var(--cols, 3) - 1) * 14px) / var(--cols, 3)); }
+
+@media (max-width: 860px) {
+  .theme-items > .item-btn {
+    width: 100%;
+    /* mobil: eine Spalte */ } }
 .board {
   max-width: 1400px;
   margin: 0; }
