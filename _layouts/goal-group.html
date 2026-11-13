@@ -15,10 +15,22 @@
   {% when '3' %}{% assign color = 'purple' %}
   {% else %}{% assign color = 'green' %}
 {% endcase %}
+
 {% if page.goal_number == '1' %}
   {% assign goal_title = page.t.global_goals.1-title %}
 {% else %}
   {% assign goal_title = goal.name %}
+{% endif %}
+
+{% assign n_items = goal_indicators.size %}
+{% if page.goal_number == '1' %}{% assign n_items = 3 %}{% endif %}
+
+{% if n_items == 4 %}
+  {% assign cols = 2 %}
+{% elsif n_items == 7 or n_items == 8 %}
+  {% assign cols = 4 %}
+{% else %}
+  {% assign cols = 3 %}
 {% endif %}
 
 <div id="main-content" class="container" role="main">
@@ -33,7 +45,8 @@
     </div>
 
     <!-- Blasen mit Symbolen und Unterthemen -->
-    <div class="theme-items">
+    <div class="theme-items" style="--cols: {{ cols }};">
+      {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
       {% if page.goal_number == '1' %}
         {% assign slugs = '1-1,1-2,1-3' | split: ',' %}
         {% for slug in slugs %}
@@ -45,7 +58,6 @@
           </button>
         {% endfor %}
       {% else %}
-        {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
         {% for group in goal_indicators %}
           {% assign target = group.name | sdg_lookup %}
           {% assign title_key = target.slug | append: '-title' %}
