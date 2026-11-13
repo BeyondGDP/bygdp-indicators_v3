@@ -179,8 +179,11 @@ body.contrast-high {
   --text-other: #000000;
 }
 
-body.contrast-high .column-header {
-  color: var(--text-other);
+body.contrast-high .column-header,
+body.contrast-high .column-header *,
+body.contrast-high a.column-header:hover,
+body.contrast-high a.column-header:focus {
+  color: #000000 !important;
 }
 
 body.contrast-high .item-btn {
